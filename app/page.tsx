@@ -39,10 +39,11 @@ export default function Home() {
   className="relative min-h-screen overflow-hidden bg-slate-950 text-white"
 >
   <img
-    src="/images/Profil/19.JPG"
-    alt="Danny Kool Suerte"
-    className="absolute inset-0 h-full w-full object-cover -scale-x-100 z-0"
-  />
+  src="/images/Profil/19.JPG"
+  alt="Danny Kool Suerte"
+  /* Ajout de object-right pour cadrer sur la personne en mode mobile */
+  className="absolute inset-0 h-full w-full object-cover object-left -scale-x-100 z-0"
+/>
   <div className="absolute inset-0 bg-slate-950/35" />
 
   <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-4 py-24 sm:px-6 lg:px-8">
