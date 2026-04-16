@@ -371,20 +371,21 @@ export default function Home() {
         </div>
       </section>
 
-<section className="bg-white py-24">
+<section className="bg-slate-950 py-24 transition-colors duration-500">
   <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div className="grid items-center gap-12 lg:grid-cols-2">
+      
       <div className="relative mx-auto w-full max-w-md lg:max-w-none">
-        <div className="absolute -left-4 -top-4 h-24 w-24 rounded-full bg-blue-100 blur-3xl" />
-        <div className="absolute -bottom-6 -right-6 h-28 w-28 rounded-full bg-emerald-100 blur-3xl" />
+        <div className="absolute -left-4 -top-4 h-24 w-24 rounded-full bg-blue-200/40 blur-3xl" />
+        <div className="absolute -bottom-6 -right-6 h-28 w-28 rounded-full bg-emerald-200/40 blur-3xl" />
 
-        <div className="relative overflow-hidden rounded-[2rem] bg-slate-100 shadow-2xl ring-1 ring-slate-200">
+        <div className="relative overflow-hidden rounded-[2rem] bg-slate-900 shadow-2xl ring-1 ring-white/10">
           <img
             src="/images/Profil/IMG-20260415-WA0005.jpg"
             alt="Danny Kool Suerte"
             className="h-[420px] w-full object-cover object-top sm:h-[520px]"
           />
-          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-transparent p-6 text-white">
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-6 text-white">
             <p className="text-sm font-medium tracking-[0.3em] text-blue-200 uppercase">
               Danny Kool Suerte
             </p>
@@ -396,24 +397,24 @@ export default function Home() {
       </div>
 
       <div className="text-center lg:text-left">
-        <p className="text-sm font-semibold uppercase tracking-[0.35em] text-blue-600">
+        <p className="text-sm font-semibold uppercase tracking-[0.35em] text-blue-400">
           À propos du formateur
         </p>
 
-        <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+        <h2 className="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl">
           Une approche humaine, claire et orientée résultats
         </h2>
 
         <div className="mx-auto mt-6 h-[2px] w-24 bg-blue-500 lg:mx-0" />
 
-        <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
+        <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
           J’accompagne chaque apprenant avec une méthode personnalisée qui met
           l’accent sur la pratique, la confiance et la progression réelle.
           Apprendre une langue devient plus simple quand l’enseignement est
           vivant, structuré et adapté à vos objectifs.
         </p>
 
-        <p className="mt-5 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
+        <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
           Mon objectif est de vous aider à parler avec assurance, comprendre
           plus vite et progresser avec plaisir, quel que soit votre niveau.
         </p>
@@ -422,13 +423,14 @@ export default function Home() {
           {["12+ ans d’expérience", "7 langues enseignées", "Cours personnalisés"].map((item) => (
             <span
               key={item}
-              className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700"
+              className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white/80"
             >
               {item}
             </span>
           ))}
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -572,7 +574,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CONTACT */}
+    
 {/* CONTACT */}
 <section id="contact" className="py-24 px-6">
   <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2">
