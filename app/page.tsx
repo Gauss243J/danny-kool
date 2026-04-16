@@ -210,7 +210,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-<section className="w-screen relative left-1/2 right-1/2 -mx-[50vw] h-[25vh] sm:h-[30vh] md:h-[40vh] overflow-hidden">
+<section className="w-screen relative left-1/2 right-1/2 -mx-[50vw] h-[45vh] sm:h-[45vh] md:h-[45vh] overflow-hidden">
 
   <div className="grid grid-cols-1 sm:grid-cols-3 h-full w-full">
 
