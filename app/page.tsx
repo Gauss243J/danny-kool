@@ -14,21 +14,66 @@ import {
   MapPinIcon,
 } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
+import { useState } from 'react';
+
+
 
 export default function Home() {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navLinks = [
+    { name: "À propos", href: "#about" },
+    { name: "Langues", href: "#languages" },
+    { name: "Cours", href: "#courses" },
+    { name: "Avis", href: "#testimonials" },
+    { name: "Contact", href: "#contact" },
+  ];
   return (
     <main className="bg-[#0b1220] text-white font-[Poppins] overflow-x-hidden">
 
       {/* NAV */}
-      <nav className="fixed top-0 w-full z-50 bg-black/30 backdrop-blur-md border-b border-white/10">
+<nav className="fixed top-0 w-full z-50 bg-black/30 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
           <h1 className="font-bold text-xl tracking-wide">Danny Kool Suerte</h1>
+          
+          {/* MENU DESKTOP */}
           <div className="hidden md:flex gap-6 text-sm text-white/80">
-            <a href="#about">À propos</a>
-            <a href="#languages">Langues</a>
-            <a href="#courses">Cours</a>
-            <a href="#testimonials">Avis</a>
-            <a href="#contact">Contact</a>
+            {navLinks.map((link) => (
+              <a key={link.name} href={link.href} className="hover:text-white transition">
+                {link.name}
+              </a>
+            ))}
+          </div>
+
+          {/* BOUTON HAMBURGER (Visible uniquement sur mobile) */}
+          <button 
+            className="md:hidden p-2 text-white"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {isOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+              )}
+            </svg>
+          </button>
+        </div>
+
+        {/* MENU MOBILE DÉROULANT */}
+        <div className={`md:hidden bg-black/90 backdrop-blur-lg transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-64 border-b border-white/10' : 'max-h-0'}`}>
+          <div className="flex flex-col gap-4 px-6 py-6 text-sm">
+            {navLinks.map((link) => (
+              <a 
+                key={link.name} 
+                href={link.href} 
+                onClick={() => setIsOpen(false)} // Ferme le menu après clic
+                className="text-white/80 hover:text-white"
+              >
+                {link.name}
+              </a>
+            ))}
           </div>
         </div>
       </nav>
