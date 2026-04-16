@@ -19,6 +19,38 @@ import { useState } from 'react';
 
 
 export default function Home() {
+  const socialLinks = [
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/TON_PROFIL_ICI",
+    color: "hover:bg-blue-600 hover:text-white",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">
+        <path d="M13.5 22v-8.2h2.75l.42-3.2H13.5V8.6c0-.92.26-1.55 1.6-1.55h1.7V4.2c-.29-.04-1.29-.12-2.46-.12-2.44 0-4.11 1.49-4.11 4.21v2.39H7.5v3.2h2.73V22h3.27Z" />
+      </svg>
+    ),
+  },
+  {
+    name: "YouTube",
+    href: "https://www.youtube.com/@TON_PROFIL_ICI",
+    color: "hover:bg-red-600 hover:text-white",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">
+        <path d="M21.7 8.2s-.2-1.48-.82-2.13c-.78-.82-1.66-.82-2.06-.87C16 5 12 5 12 5s-4 0-6.82.2c-.4.05-1.28.05-2.06.87C2.5 6.72 2.3 8.2 2.3 8.2S2 9.94 2 11.67v.66C2 14.06 2.3 15.8 2.3 15.8s.2 1.48.82 2.13c.78.82 1.8.79 2.25.88 1.6.15 6.63.19 6.63.19s4 0 6.82-.2c.4-.05 1.28-.05 2.06-.87.62-.65.82-2.13.82-2.13s.3-1.74.3-3.47v-.66c0-1.73-.3-3.47-.3-3.47ZM9.95 14.7V9.6l5.1 2.55-5.1 2.55Z" />
+      </svg>
+    ),
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/TON_PROFIL_ICI",
+    color: "hover:bg-pink-600 hover:text-white",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">
+        <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 2.5A5.5 5.5 0 1 1 6.5 12 5.51 5.51 0 0 1 12 6.5Zm0 2A3.5 3.5 0 1 0 15.5 12 3.5 3.5 0 0 0 12 8.5Zm5.75-2.05a1.2 1.2 0 1 1-1.2 1.2 1.2 1.2 0 0 1 1.2-1.2Z" />
+      </svg>
+    ),
+  },
+];
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -339,6 +371,70 @@ export default function Home() {
         </div>
       </section>
 
+<section className="bg-white py-24">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="grid items-center gap-12 lg:grid-cols-2">
+      <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+        <div className="absolute -left-4 -top-4 h-24 w-24 rounded-full bg-blue-100 blur-3xl" />
+        <div className="absolute -bottom-6 -right-6 h-28 w-28 rounded-full bg-emerald-100 blur-3xl" />
+
+        <div className="relative overflow-hidden rounded-[2rem] bg-slate-100 shadow-2xl ring-1 ring-slate-200">
+          <img
+            src="/images/Profil/IMG-20260415-WA0005.jpg"
+            alt="Danny Kool Suerte"
+            className="h-[420px] w-full object-cover object-top sm:h-[520px]"
+          />
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-transparent p-6 text-white">
+            <p className="text-sm font-medium tracking-[0.3em] text-blue-200 uppercase">
+              Danny Kool Suerte
+            </p>
+            <p className="mt-2 text-lg font-semibold sm:text-xl">
+              Professeur de langues · Formateur · Polyglotte
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="text-center lg:text-left">
+        <p className="text-sm font-semibold uppercase tracking-[0.35em] text-blue-600">
+          À propos du formateur
+        </p>
+
+        <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+          Une approche humaine, claire et orientée résultats
+        </h2>
+
+        <div className="mx-auto mt-6 h-[2px] w-24 bg-blue-500 lg:mx-0" />
+
+        <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
+          J’accompagne chaque apprenant avec une méthode personnalisée qui met
+          l’accent sur la pratique, la confiance et la progression réelle.
+          Apprendre une langue devient plus simple quand l’enseignement est
+          vivant, structuré et adapté à vos objectifs.
+        </p>
+
+        <p className="mt-5 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
+          Mon objectif est de vous aider à parler avec assurance, comprendre
+          plus vite et progresser avec plaisir, quel que soit votre niveau.
+        </p>
+
+        <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
+          {["12+ ans d’expérience", "7 langues enseignées", "Cours personnalisés"].map((item) => (
+            <span
+              key={item}
+              className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
       {/* MÉTHODE */}
       <section id="methodology" className="py-24 px-6 bg-black/30">
         <div className="max-w-7xl mx-auto">
@@ -477,69 +573,90 @@ export default function Home() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="py-24 px-6">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
-          <div>
-            <h2 className="text-4xl font-bold">
-              Contact
-            </h2>
-            <p className="mt-4 text-white/70 max-w-xl leading-8">
-              Disponible du lundi au samedi de 8h00 à 20h00. Dimanche sur rendez-vous.
-            </p>
+{/* CONTACT */}
+<section id="contact" className="py-24 px-6">
+  <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2">
+    <div>
+      <h2 className="text-4xl font-bold">Contact</h2>
+      <p className="mt-4 max-w-xl leading-8 text-white/70">
+        Disponible du lundi au samedi de 8h00 à 20h00. Dimanche sur rendez-vous.
+      </p>
 
-            <div className="mt-8 space-y-3 text-white/80">
-              <p className="flex items-center gap-2">
-                <PhoneIcon className="w-5 h-5" />
-                097 379 1831
-              </p>
-              <p className="flex items-center gap-2">
-                <EnvelopeIcon className="w-5 h-5" />
-                dannykoolsuerte@mail.com
-              </p>
-              <p className="flex items-center gap-2">
-                <MapPinIcon className="w-5 h-5" />
-                Kinshasa, RDC
-              </p>
-            </div>
-          </div>
+      <div className="mt-8 space-y-3 text-white/80">
+        <p className="flex items-center gap-2">
+          <PhoneIcon className="h-5 w-5" />
+          097 379 1831
+        </p>
+        <p className="flex items-center gap-2">
+          <EnvelopeIcon className="h-5 w-5" />
+          dannykoolsuerte@mail.com
+        </p>
+        <p className="flex items-center gap-2">
+          <MapPinIcon className="h-5 w-5" />
+          Kinshasa, RDC
+        </p>
+      </div>
 
-          <div className="bg-white text-slate-900 rounded-3xl p-6 shadow-2xl">
-            <div className="grid gap-4">
-              <input
-                type="text"
-                placeholder="Nom complet"
-                className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-blue-500"
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-blue-500"
-              />
-              <select className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-blue-500">
-                <option>Choisir une langue</option>
-                <option>Français</option>
-                <option>Anglais</option>
-                <option>Espagnol</option>
-                <option>Portugais</option>
-                <option>Allemand</option>
-                <option>Swahili</option>
-                <option>Lingala</option>
-              </select>
-              <textarea
-                rows={5}
-                placeholder="Votre message"
-                className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-blue-500"
-              />
-              <button
-                type="button"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
-              >
-                Envoyer la demande
-              </button>
-            </div>
-          </div>
+      <div className="mt-8">
+        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">
+          Réseaux sociaux
+        </p>
+
+        <div className="flex flex-wrap gap-3">
+          {socialLinks.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={item.name}
+              className={`inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/80 transition duration-300 hover:scale-105 ${item.color}`}
+            >
+              {item.icon}
+              <span>{item.name}</span>
+            </a>
+          ))}
         </div>
-      </section>
+      </div>
+    </div>
+
+    <div className="rounded-3xl bg-white p-6 text-slate-900 shadow-2xl">
+      <div className="grid gap-4">
+        <input
+          type="text"
+          placeholder="Nom complet"
+          className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-blue-500"
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-blue-500"
+        />
+        <select className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-blue-500">
+          <option>Choisir une langue</option>
+          <option>Français</option>
+          <option>Anglais</option>
+          <option>Espagnol</option>
+          <option>Portugais</option>
+          <option>Allemand</option>
+          <option>Swahili</option>
+          <option>Lingala</option>
+        </select>
+        <textarea
+          rows={5}
+          placeholder="Votre message"
+          className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-blue-500"
+        />
+        <button
+          type="button"
+          className="inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
+        >
+          Envoyer la demande
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* FOOTER */}
       <footer className="border-t border-white/10 bg-black/40 py-6">
