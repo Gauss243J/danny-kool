@@ -345,12 +345,12 @@ export default function Home() {
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-0">
 
     {[
-      "/images/gallery/IMG-20260415-WA0014.jpg",
-      "/images/gallery/IMG_0116.jpg",
-      "/images/gallery/IMG_8955.jpg",
-      "/images/gallery/IMG-20260415-WA0011.jpg",
-      "/images/gallery/IMG_5521.jpg",
-      "/images/gallery/IMG_9096.jpg",
+      "/images/Gallery/IMG-20260415-WA0014.jpg",
+      "/images/Gallery/IMG_0116.jpg",
+      "/images/Gallery/IMG_8955.jpg",
+      "/images/Gallery/IMG-20260415-WA0011.jpg",
+      "/images/Gallery/IMG_5521.jpg",
+      "/images/Gallery/IMG_9096.jpg",
     ].map((img, i) => (
       <div
         key={i}
