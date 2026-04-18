@@ -168,39 +168,43 @@ export default function Home() {
         {[
           "/images/logo/IMG-20260415-WA0034.jpg",
           "/images/logo/IMG-20260415-WA0037.jpg",
-          "/images/logo/IMG-20260415-WA0038.jpg",
-          "/images/logo/IMG-20260415-WA0039.jpg",
-          "/images/logo/IMG-20260415-WA0040.jpg",
+          "/images/logo/IMG-20260417-WA0012.jpg",
+          "/images/logo/IMG-20260417-WA0000.jpg",
+          "/images/logo/IMG-20260417-WA0001.jpg",
           "/images/logo/IMG-20260415-WA0041.jpg",
-          "/images/logo/IMG-20260415-WA0042.jpg",
+          "/images/logo/IMG-20260417-WA0011.jpg",
           "/images/logo/IMG-20260415-WA0043.jpg",
-           "/images/logo/IMG-20260415-WA0044.jpg",
+          "/images/logo/IMG-20260415-WA0044.jpg",
+          "/images/logo/IMG-20260417-WA0009.jpg",
+          "/images/logo/IMG-20260417-WA0017.jpg",
 
         ].map((logo, i) => (
           <img
             key={i}
             src={logo}
             alt={`Logo ${i + 1}`}
-            className="h-15 w-auto opacity-70 grayscale-65 transition duration-300 hover:opacity-100 hover:grayscale-0"
+            className="h-15 w-auto opacity-90 grayscale-60 transition duration-300 hover:opacity-100 hover:grayscale-0"
           />
         ))}
 
         {[
           "/images/logo/IMG-20260415-WA0034.jpg",
           "/images/logo/IMG-20260415-WA0037.jpg",
-          "/images/logo/IMG-20260415-WA0038.jpg",
-          "/images/logo/IMG-20260415-WA0039.jpg",
-          "/images/logo/IMG-20260415-WA0040.jpg",
+          "/images/logo/IMG-20260417-WA0012.jpg",
+          "/images/logo/IMG-20260417-WA0000.jpg",
+          "/images/logo/IMG-20260417-WA0001.jpg",
           "/images/logo/IMG-20260415-WA0041.jpg",
-          "/images/logo/IMG-20260415-WA0042.jpg",
+          "/images/logo/IMG-20260417-WA0011.jpg",
           "/images/logo/IMG-20260415-WA0043.jpg",
-           "/images/logo/IMG-20260415-WA0044.jpg",
+          "/images/logo/IMG-20260415-WA0044.jpg",
+          "/images/logo/IMG-20260417-WA0009.jpg",
+          "/images/logo/IMG-20260417-WA0017.jpg",
         ].map((logo, i) => (
           <img
             key={`dup-${i}`}
             src={logo}
             alt={`Logo duplicate ${i + 1}`}
-            className="h-15 w-auto opacity-70 grayscale-65 transition duration-300 hover:opacity-100 hover:grayscale-0"
+            className="h-15 w-auto opacity-90 grayscale-60 transition duration-300 hover:opacity-100 hover:grayscale-0"
           />
         ))}
       </div>
