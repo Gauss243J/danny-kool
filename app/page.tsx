@@ -22,7 +22,7 @@ export default function Home() {
   const socialLinks = [
   {
     name: "Facebook",
-    href: "https://www.facebook.com/TON_PROFIL_ICI",
+    href: "https://www.facebook.com/profile.php?id=61586018024476",
     color: "hover:bg-blue-600 hover:text-white",
     icon: (
       <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">
@@ -32,7 +32,7 @@ export default function Home() {
   },
   {
     name: "YouTube",
-    href: "https://www.youtube.com/@TON_PROFIL_ICI",
+    href: "https://youtube.com/@dannykoolsuerte?si=xn2BI7XPE7Bfz9Oy",
     color: "hover:bg-red-600 hover:text-white",
     icon: (
       <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">
@@ -42,7 +42,7 @@ export default function Home() {
   },
   {
     name: "Instagram",
-    href: "https://www.instagram.com/TON_PROFIL_ICI",
+    href: "https://www.instagram.com/dannykoolsuerte?igsh=bTVrZ2t3ZWRiY2o0&utm_source=qr",
     color: "hover:bg-pink-600 hover:text-white",
     icon: (
       <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">
@@ -50,6 +50,17 @@ export default function Home() {
       </svg>
     ),
   },
+  {
+  name: "X",
+  href: "https://x.com/Dannykoolsuerte",
+  color: "hover:bg-black hover:text-white",
+  icon: (
+    <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">
+      <path d="M18.244 2H21l-6.5 7.43L22 22h-6.828l-5.35-7.003L3.5 22H1l6.95-7.945L2 2h6.828l4.85 6.42L18.244 2Zm-2.4 18h1.89L7.06 4H5.05l10.794 16Z"/>
+    </svg>
+  ),
+},
+
 ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -217,7 +228,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold mb-10">À propos</h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
             <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
               <AcademicCapIcon className="w-10 h-10 text-blue-400" />
@@ -243,9 +254,19 @@ export default function Home() {
               </p>
             </div>
 
+            <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
+              <GlobeAltIcon className="w-10 h-10 text-green-400" />
+              <h3 className="mt-4 font-semibold">Interprétation & Traduction</h3>
+              <p className="text-white/60 text-sm mt-2">
+                Services professionnels d’interprétation et traduction de documents officiels, académiques et professionnels avec précision et confidentialité.
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
+
+
 <section className="w-screen relative left-1/2 right-1/2 -mx-[50vw] h-[45vh] sm:h-[45vh] md:h-[45vh] overflow-hidden">
 
   <div className="grid grid-cols-1 sm:grid-cols-3 h-full w-full">
@@ -299,81 +320,47 @@ export default function Home() {
 
 </section>
 
-      {/* LANGUAGES */}
-      <section id="languages" className="py-24 px-6 bg-black/40">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold mb-10">Langues enseignées</h2>
+<section id="languages" className="py-24 px-6 bg-black/40">
+  <div className="max-w-7xl mx-auto">
+    <h2 className="text-4xl font-bold mb-12 text-center">
+      Langues enseignées
+    </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { name: "Français" },
-              { name: "Anglais" },
-              { name: "Espagnol" },
-              { name: "Portugais" },
-              { name: "Allemand" },
-              { name: "Swahili" },
-            ].map((lang, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ scale: 1.05, rotate: -1 }}
-                className="relative bg-[#fdf6e3] text-black p-6 rounded-[20px] shadow-xl border-[1px] border-[#e8dcc0] font-[cursive]"
-                style={{
-                  transform: "rotate(-1deg)",
-                }}
-              >
-                <div className="absolute -top-3 left-4 w-10 h-6 bg-yellow-200 rotate-[-10deg] shadow-md"></div>
+    <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      {[
+        { name: "Français", desc: "Communication élégante et professionnelle." },
+        { name: "Anglais", desc: "Langue internationale pour études et business." },
+        { name: "Espagnol", desc: "Expression fluide et naturelle au quotidien." },
+        { name: "Portugais", desc: "Langue dynamique utilisée dans plusieurs continents." },
+        { name: "Allemand", desc: "Structure et précision pour un langage rigoureux." },
+        { name: "Swahili", desc: "Communication locale essentielle en Afrique de l’Est." },
+        { name: "Italien", desc: "Langue culturelle riche et expressive." },
+        { name: "Lingala", desc: "Langue africaine vivante et authentique." },
+      ].map((lang, i) => (
+        <motion.div
+          key={i}
+          whileHover={{ scale: 1.05, rotate: -1 }}
+          className="group relative p-6 rounded-[20px] bg-[#fdf6e3] text-black shadow-xl border border-[#e8dcc0]"
+          style={{ transform: "rotate(-1deg)" }}
+        >
+          {/* AUTOCOLLANT  */}
+          <div className="absolute -top-3 left-6 w-12 h-5 bg-yellow-200 rotate-[-8deg] shadow-md rounded-sm group-hover:rotate-0 transition" />
 
-                <h3 className="text-xl font-bold">{lang.name}</h3>
-                <p className="text-sm mt-2">
-                  Apprentissage interactif basé sur la communication réelle.
-                </p>
-              </motion.div>
-            ))}
+          {/* glow subtil */}
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-blue-400/10 to-purple-400/10 blur-xl rounded-[20px]" />
+
+          <div className="relative z-10">
+            <h3 className="text-xl font-bold">{lang.name}</h3>
+
+            <p className="text-sm mt-3 opacity-80 group-hover:opacity-100 transition">
+              {lang.desc}
+            </p>
           </div>
-        </div>
-      </section>
-            {/* SERVICES */}
-      <section id="courses" className="py-24 px-6">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold mb-10 text-center">
-            Cours proposés
-          </h2>
-
-          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-            <motion.div whileHover={{ y: -8 }} className="bg-white/5 border border-white/10 p-6 rounded-2xl">
-              <AcademicCapIcon className="w-9 h-9 text-blue-400" />
-              <h3 className="mt-4 text-xl font-semibold">Débutant</h3>
-              <p className="text-white/65 text-sm mt-2">
-                Apprendre les bases essentielles avec simplicité.
-              </p>
-            </motion.div>
-
-            <motion.div whileHover={{ y: -8 }} className="bg-white/5 border border-white/10 p-6 rounded-2xl">
-              <ChatBubbleBottomCenterTextIcon className="w-9 h-9 text-cyan-400" />
-              <h3 className="mt-4 text-xl font-semibold">Intermédiaire</h3>
-              <p className="text-white/65 text-sm mt-2">
-                Renforcer l’expression et la compréhension.
-              </p>
-            </motion.div>
-
-            <motion.div whileHover={{ y: -8 }} className="bg-white/5 border border-white/10 p-6 rounded-2xl">
-              <GlobeAltIcon className="w-9 h-9 text-emerald-400" />
-              <h3 className="mt-4 text-xl font-semibold">Avancé</h3>
-              <p className="text-white/65 text-sm mt-2">
-                Perfectionner la fluidité et la précision.
-              </p>
-            </motion.div>
-
-            <motion.div whileHover={{ y: -8 }} className="bg-white/5 border border-white/10 p-6 rounded-2xl">
-              <AcademicCapIcon className="w-9 h-9 text-pink-400" />
-              <h3 className="mt-4 text-xl font-semibold">Examens & entretiens</h3>
-              <p className="text-white/65 text-sm mt-2">
-                Préparation ciblée selon l’objectif demandé.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
 <section className="bg-slate-950 py-24 transition-colors duration-500">
   <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -645,6 +632,7 @@ export default function Home() {
           <option>Espagnol</option>
           <option>Portugais</option>
           <option>Allemand</option>
+          <option>Italien</option>
           <option>Swahili</option>
           <option>Lingala</option>
         </select>
