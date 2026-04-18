@@ -138,7 +138,7 @@ export default function Home() {
     <div className="grid w-full gap-10 lg:grid-cols-2 lg:items-center">
       <div>
         <div className="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur">
-          Professeur de langues polyglotte
+          Professeur de langues - polyglotte
         </div>
 
         <h1 className="mt-6 max-w-xl text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
@@ -146,7 +146,7 @@ export default function Home() {
         </h1>
 
         <p className="mt-6 max-w-xl text-base leading-8 text-white/75 sm:text-lg">
-          Français, anglais, espagnol, portugais, allemand, swahili et lingala.
+          Français, anglais, espagnol, portugais, allemand,Italien, swahili et lingala.
         </p>
 
         <div className="mt-8 flex flex-col gap-4 sm:flex-row">
